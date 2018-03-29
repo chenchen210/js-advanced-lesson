@@ -115,6 +115,15 @@ var fun1=function(){
 };
 obj.fun3=fun1;
 obj.fun4=fun1();
-console.log("输出：",obj.fun3());//
-console.log("输出：",obj.fun3()());
-console.log("输出：",obj.fun4());
+console.log("输出：",obj.fun3());//输出一函数 fun2(){
+                                        //     return this.x;
+                                        // }
+console.log("输出：",obj.fun3()());//输出：12
+/**
+ fun3是fun1的赋值，fun3（）调用fun1（）返回一个函数（此时函数主体是fun3），再加上一个（）表示调用
+ 返回的函数即fun2（），函数嵌套的函数主体是全局，所以输出12
+ */
+console.log("输出：",obj.fun4());//输出：34
+/**
+ fun4是fun1调用的返回值即fun2（），调用fun2（），此时函数主体是obj。输出34
+ */
