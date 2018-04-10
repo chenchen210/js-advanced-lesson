@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <style type="text/css">
+        .container{
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+            border: 3px solid red;
+        }
+        .tabs>span{
+            float: left;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+        .contents{
+            clear: both;
+        }
+        .contents>div{
+            height: 250px;
+            line-height: 250px;
+            font-size: 50px;
+            text-align: center;
+            display: none;
+        }
+        .contents>.show{
+            display: block;
+        }
+        .active{
+            background-color: #cdcdcd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <span class="active">导航0</span>
+            <span>导航1</span>
+            <span>导航2</span>
+            <span>导航3</span>
+        </div>
+            <div class="contents">
+                <div class="show">content x</div>
+            </div>
+    </div>
+    <script src="js/04.js"></script>
+</body>
+</html>
