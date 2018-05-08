@@ -15,6 +15,26 @@ console.log(arr1);
 8 "大于3"
  */
 
+var arr1=[2,5,8];
+arr1.forEach(function(a){
+   console.log(a,this);//-----此时的this为window下的
+});
+console.log(arr1);
+/**
+2 Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+5 Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+8 Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+ */
+
+var arr1=[2,5,8];
+var arr2=[1,6,7];
+var arr3=[];
+arr1.forEach(function(a,i){
+   arr3[i]=(a>arr2[i]?a:arr2[i]);
+},arr2);
+console.log(arr3);
+//（3）[2,6,8]
+
 //Array.prototype.every(callback,thisValue?) 
 //返回一个布尔类型 若有不满足的将不再进行后续判断直接返回false
 var arr2=[2,5,8];
