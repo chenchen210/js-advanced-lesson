@@ -13,7 +13,7 @@ console.log(a,b);//undefined 23
 var a=b;
 console.log(a,b);//23 23
 
-console.log(obj1.obj2);//报错
+console.log(obj1,obj2);//报错
 var obj1={x:23};
 console.log(obj1,obj2);//{x:23} undefined
 var obj2=obj1;
